@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Observasi Anak</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .form-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .checkbox-column {
+      width: 30%;
+    }
+    .checkbox-column div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .checkbox-column p {
+      margin: 0;
+      font-size: 14px;
+      width: 80%;
+    }
+    .checkbox-column input {
+      margin-left: 10px;
+    }
+    .submit-btn {
+      background-color: #28a745;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    .submit-btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h1>Form Observasi Anak</h1>
+  <div class="form-container">
+    <!-- Data Dasar Anak -->
+    <div class="form-group">
+      <label for="nama-anak">Nama Anak:</label>
+      <input type="text" id="nama-anak" name="nama-anak" required>
+    </div>
+    <div class="form-group">
+      <label for="usia-anak">Usia Anak:</label>
+      <input type="number" id="usia-anak" name="usia-anak" required>
+    </div>
+    <div class="form-group">
+      <label for="nama-ortu">Nama Orangtua:</label>
+      <input type="text" id="nama-ortu" name="nama-ortu" required>
+    </div>
+    <div class="form-group">
+      <label for="pekerjaan-ortu">Pekerjaan Orangtua:</label>
+      <input type="text" id="pekerjaan-ortu" name="pekerjaan-ortu" required>
+    </div>
+    <div class="form-group">
+      <label for="sehari-dengan">Seharian dengan Siapa:</label>
+      <select id="sehari-dengan" name="sehari-dengan" required>
+        <option value="Ibu">Ibu</option>
+        <option value="Ayah">Ayah</option>
+        <option value="Pengasuh">Pengasuh</option>
+        <option value="Kakek/Nenek">Kakek/Nenek</option>
+        <option value="Lainnya">Lainnya</option>
+      </select>
+    </div>
+	<!-- Ceklis Keseharian Anak (3 Kolom Horizontal) -->
+    <div class="form-group">
+      <h1>Ceklis Keseharian Anak</h1>
+    <p>Isilah ceklis di bawah ini dengan jujur sesuai keseharian anak karena akan berpengaruh pada kegiatan.</p>
+    
+      <div class="checkbox-group">
+        <!-- Kolom 1 -->
+        <div class="checkbox-column">
+          <div>
+            <p>Lebih senang melihat & mengamati objek</p>
+            <label><input type="checkbox" name="cek-keseharian-1" value="Melihat & Mengamati Objek"></label>
+          </div>
+          <div>
+            <p>Lebih tertarik pada objek yang menyala atau mencolok & berwarna warni</p>
+            <label><input type="checkbox" name="cek-keseharian-1" value="Tertarik pada Objek Menyala"></label>
+          </div>
+          <div>
+            <p>Sering terlihat melamun saat mengingat sesuatu</p>
+            <label><input type="checkbox" name="cek-keseharian-1" value="Sering Melamun Saat Mengingat"></label>
+          </div>
+          <div>
+            <p>Cenderung memperlihatkan gerak-gerik orang yang sedang bicara</p>
+            <label><input type="checkbox" name="cek-keseharian-1" value="Gerak-Gerik Saat Orang Bicara"></label>
+          </div>
+          <div>
+            <p>Perlu instruksi secara tertulis</p>
+            <label><input type="checkbox" name="cek-keseharian-1" value="Perlu Instruksi Tertulis"></label>
+          </div>
+          <div>
+            <p>Tidak cepat akrab</p>
+            <label><input type="checkbox" name="cek-keseharian-1" value="Tidak Cepat Akrab"></label>
+          </div>
+          <div>
+            <p>Lebih mengamati orang atau lingkungan sekitar yang baru kenal</p>
+            <label><input type="checkbox" name="cek-keseharian-1" value="Mengamati Orang Baru"></label>
+          </div>
+        </div>
+
+        <!-- Kolom 2 -->
+        <div class="checkbox-column">
+          <div>
+            <p>Lebih sering mengulang kata yang disampaikan</p>
+            <label><input type="checkbox" name="cek-keseharian-2" value="Mengulang Kata"></label>
+          </div>
+          <div>
+            <p>Lebih senang informasi dengan suara</p>
+            <label><input type="checkbox" name="cek-keseharian-2" value="Senang Informasi Suara"></label>
+          </div>
+          <div>
+            <p>Mengingat dengan baik informasi yang disajikan dengan nada berirama atau lagu</p>
+            <label><input type="checkbox" name="cek-keseharian-2" value="Mengingat dengan Nada"></label>
+          </div>
+          <div>
+            <p>Cenderung tidak memperhatikan orang yang berbicara namun dapat mengulang yang dibicarakan</p>
+            <label><input type="checkbox" name="cek-keseharian-2" value="Cenderung Tidak Perhatikan Orang Bicara"></label>
+          </div>
+          <div>
+            <p>Senang berargumentasi atau senang berdebat</p>
+            <label><input type="checkbox" name="cek-keseharian-2" value="Senang Berdebat"></label>
+          </div>
+        </div>
+
+        <!-- Kolom 3 -->
+        <div class="checkbox-column">
+          <div>
+            <p>Lebih sering bergerak</p>
+            <label><input type="checkbox" name="cek-keseharian-3" value="Sering Bergerak"></label>
+          </div>
+          <div>
+            <p>Sulit duduk tenang</p>
+            <label><input type="checkbox" name="cek-keseharian-3" value="Sulit Duduk Tenang"></label>
+          </div>
+          <div>
+            <p>Selalu menempati diri sedang bergerak</p>
+            <label><input type="checkbox" name="cek-keseharian-3" value="Selalu Bergerak"></label>
+          </div>
+          <div>
+            <p>Dapat mengingat dengan baik jika melakukan gerakan tertentu</p>
+            <label><input type="checkbox" name="cek-keseharian-3" value="Mengingat Gerakan"></label>
+          </div>
+          <div>
+            <p>Cenderung terburu-buru</p>
+            <label><input type="checkbox" name="cek-keseharian-3" value="Cenderung Terburu-Buru"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Ceklis Kesukaan Anak</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .checkbox-column {
+            width: 23%;
+            min-width: 200px;
+        }
+        .checkbox-column p {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .checkbox-column label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .submit-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ceklis Kesukaan Anak</h1>
+    <p>Isilah ceklis di bawah ini dengan jujur sesuai kesukaan anak karena akan berpengaruh pada kegiatan.</p>
+    
+    <div class="container">
+        <!-- Kolom 1 -->
+        <div class="checkbox-column">
+            <p>Kesukaan 1: Bahasa dan Kata</p>
+            <label><input type="checkbox" name="cek-kesukaan-1" value="Senang berbicara cepat dengan tata bahasa baik"> Senang berbicara cepat dengan tata bahasa baik</label>
+            <label><input type="checkbox" name="cek-kesukaan-1" value="Senang mengumpulkan kata-kata baru"> Senang mengumpulkan kata-kata baru</label>
+            <label><input type="checkbox" name="cek-kesukaan-1" value="Senang memamerkan perbendaharaan kata baru"> Senang memamerkan perbendaharaan kata baru</label>
+            <label><input type="checkbox" name="cek-kesukaan-1" value="Menyukai lelucon dan kata plesetan"> Menyukai lelucon dan kata plesetan</label>
+            <label><input type="checkbox" name="cek-kesukaan-1" value="Senang membuat tulisan kreatif"> Senang membuat tulisan kreatif</label>
+            <label><input type="checkbox" name="cek-kesukaan-1" value="Mengarang kisah khayal"> Mengarang kisah khayal</label>
+            <label><input type="checkbox" name="cek-kesukaan-1" value="Sangat hafal nama, tempat, tanggal & hal-hal kecil"> Sangat hafal nama, tempat, tanggal & hal-hal kecil</label>
+            <label><input type="checkbox" name="cek-kesukaan-1" value="Menikmati membaca buku"> Menikmati membaca buku</label>
+            <label><input type="checkbox" name="cek-kesukaan-1" value="Mengeja kata dengan tepat mudah"> Mengeja kata dengan tepat mudah</label>
+            <label><input type="checkbox" name="cek-kesukaan-1" value="Menyukai permainan kata (lucu)"> Menyukai permainan kata (lucu)</label>
+            <label><input type="checkbox" name="cek-kesukaan-1" value="Senang mengisi teka-teki silang"> Senang mengisi teka-teki silang</label>
+            <label><input type="checkbox" name="cek-kesukaan-1" value="Menikmati mendengarkan kata-kata lisan"> Menikmati mendengarkan kata-kata lisan</label>
+            <label><input type="checkbox" name="cek-kesukaan-1" value="Mempunyai kosa kata yang luas untuk seusianya"> Mempunyai kosa kata yang luas untuk seusianya</label>
+            <label><input type="checkbox" name="cek-kesukaan-1" value="Unggul dalam pembelajaran baca & tulis"> Unggul dalam pembelajaran baca & tulis</label>
+            <label><input type="checkbox" name="cek-kesukaan-1" value="Senang mengarang, membuat cerita & berdiskusi"> Senang mengarang, membuat cerita & berdiskusi</label>
+            <label><input type="checkbox" name="cek-kesukaan-1" value="Pandai meniru logat bahasa orang lain"> Pandai meniru logat bahasa orang lain</label>
+            <label><input type="checkbox" name="cek-kesukaan-1" value="Dapat membuat puisi, sajak & menulis cerita"> Dapat membuat puisi, sajak & menulis cerita</label>
+        </div>
+
+        <!-- Kolom 2 -->
+        <div class="checkbox-column">
+            <p>Kesukaan 2: Seni dan Visual</p>
+            <label><input type="checkbox" name="cek-kesukaan-2" value="Senang bermain balok kayu, lego dan mainan konstruksi"> Senang bermain balok kayu, lego dan mainan konstruksi</label>
+            <label><input type="checkbox" name="cek-kesukaan-2" value="Senang membuat bangunan"> Senang membuat bangunan</label>
+            <label><input type="checkbox" name="cek-kesukaan-2" value="Menciptakan bentuk dengan menggunakan cat, tanah liat, program komputer"> Menciptakan bentuk dengan menggunakan cat, tanah liat, program komputer</label>
+            <label><input type="checkbox" name="cek-kesukaan-2" value="Senang merancang poster, merancang bunga, menata perabot"> Senang merancang poster, merancang bunga, menata perabot</label>
+            <label><input type="checkbox" name="cek-kesukaan-2" value="Mudah mengenali wajah"> Mudah mengenali wajah</label>
+            <label><input type="checkbox" name="cek-kesukaan-2" value="Senang menggantung benda / gambar pada dinding"> Senang menggantung benda / gambar pada dinding</label>
+            <label><input type="checkbox" name="cek-kesukaan-2" value="Senang di kelas seni"> Senang di kelas seni</label>
+            <label><input type="checkbox" name="cek-kesukaan-2" value="Memberikan gambaran visual yang jelas ketika memikirkan sesuatu"> Memberikan gambaran visual yang jelas ketika memikirkan sesuatu</label>
+            <label><input type="checkbox" name="cek-kesukaan-2" value="Mudah membaca peta, grafik, dan diagram"> Mudah membaca peta, grafik, dan diagram</label>
+            <label><input type="checkbox" name="cek-kesukaan-2" value="Menggambar benda persis sosok aslinya"> Menggambar benda persis sosok aslinya</label>
+            <label><input type="checkbox" name="cek-kesukaan-2" value="Senang melihat film, slide atau foto"> Senang melihat film, slide atau foto</label>
+            <label><input type="checkbox" name="cek-kesukaan-2" value="Menikmati permainan teka teki jigsaw, maze, dll"> Menikmati permainan teka teki jigsaw, maze, dll</label>
+            <label><input type="checkbox" name="cek-kesukaan-2" value="Sering terlihat melamun membayangkan bentuk bangunan /ruang"> Sering terlihat melamun membayangkan bentuk bangunan /ruang</label>
+            <label><input type="checkbox" name="cek-kesukaan-2" value="Dapat membangun konstruksi tiga dimensi"> Dapat membangun konstruksi tiga dimensi</label>
+        </div>
+
+        <!-- Kolom 3 -->
+        <div class="checkbox-column">
+            <p>Kesukaan 3: Matematika dan Logika</p>
+            <label><input type="checkbox" name="cek-kesukaan-3" value="Menyukai teka-teki"> Menyukai teka-teki</label>
+            <label><input type="checkbox" name="cek-kesukaan-3" value="Suka berpikir secara matematis"> Suka berpikir secara matematis</label>
+            <label><input type="checkbox" name="cek-kesukaan-3" value="Senang mengukur"> Senang mengukur</label>
+            <label><input type="checkbox" name="cek-kesukaan-3" value="Senang menghitung benda atau angka"> Senang menghitung benda atau angka</label>
+            <label><input type="checkbox" name="cek-kesukaan-3" value="Senang dengan program komputer"> Senang dengan program komputer</label>
+            <label><input type="checkbox" name="cek-kesukaan-3" value="Menyukai alat pertukangan"> Menyukai alat pertukangan</label>
+            <label><input type="checkbox" name="cek-kesukaan-3" value="Suka mengajukan pertanyaan mengapa ?"> Suka mengajukan pertanyaan mengapa ?</label>
+            <label><input type="checkbox" name="cek-kesukaan-3" value="Senang permainan strategi"> Senang permainan strategi</label>
+            <label><input type="checkbox" name="cek-kesukaan-3" value="Menjelaskan masalah secara logis"> Menjelaskan masalah secara logis</label>
+            <label><input type="checkbox" name="cek-kesukaan-3" value="Senang merancang eksperimen"> Senang merancang eksperimen</label>
+            <label><input type="checkbox" name="cek-kesukaan-3" value="Menghabiskan waktu dengan permainan logika"> Menghabiskan waktu dengan permainan logika</label>
+            <label><input type="checkbox" name="cek-kesukaan-3" value="Mudah & cepat memahami sebab akibat dari suatu persoalan"> Mudah & cepat memahami sebab akibat dari suatu persoalan</label>
+            <label><input type="checkbox" name="cek-kesukaan-3" value="Menikmati pelajaran matematika, IPA"> Menikmati pelajaran matematika, IPA</label>
+            <label><input type="checkbox" name="cek-kesukaan-3" value="Menghitung diluar kepala tanpa alat bantu"> Menghitung diluar kepala tanpa alat bantu</label>
+            <label><input type="checkbox" name="cek-kesukaan-3" value="Menilai sesuatu berdasarkan keakuratan dan persisi"> Menilai sesuatu berdasarkan keakuratan dan persisi</label>
+        </div>
+
+        <!-- Kolom 4 -->
+        <div class="checkbox-column">
+            <p>Kesukaan 4: Musik dan Melodi</p>
+            <label><input type="checkbox" name="cek-kesukaan-4" value="Suka menganggukan kepala"> Suka menganggukan kepala</label>
+            <label><input type="checkbox" name="cek-kesukaan-4" value="Mudah mengingat melodi"> Mudah mengingat melodi</label>
+            <label><input type="checkbox" name="cek-kesukaan-4" value="Pandai memainkan alat musik"> Pandai memainkan alat musik</label>
+            <label><input type="checkbox" name="cek-kesukaan-4" value="Mempunyai suara yang bagus"> Mempunyai suara yang bagus</label>
+            <label><input type="checkbox" name="cek-kesukaan-4" value="Mudah mengikuti irama musik"> Mudah mengikuti irama musik</label>
+            <label><input type="checkbox" name="cek-kesukaan-4" value="Mudah terbawa emosi dlm alunan lagu"> Mudah terbawa emosi dlm alunan lagu</label>
+            <label><input type="checkbox" name="cek-kesukaan-4" value="Mudah belajar dengan alunan musik"> Mudah belajar dengan alunan musik</label>
+            <label><input type="checkbox" name="cek-kesukaan-4" value="Cepat mempelajari sebuah lagu bahkan menciptakannya"> Cepat mempelajari sebuah lagu bahkan menciptakannya</label>
+            <label><input type="checkbox" name="cek-kesukaan-4" value="Senang menyaksikan acara-acara musik"> Senang menyaksikan acara-acara musik</label>
+            <label><input type="checkbox" name="cek-kesukaan-4" value="Peka terhadap suara & jenis bunyi"> Peka terhadap suara & jenis bunyi</label>
+            <label><input type="checkbox" name="cek-kesukaan-4" value="Senang bersenandung"> Senang bersenandung</label>
+            <label><input type="checkbox" name="cek-kesukaan-4" value="Mengubah lirik lagu yang mereka hafal"> Mengubah lirik lagu yang mereka hafal</label>
+            <label><input type="checkbox" name="cek-kesukaan-4" value="Mengubah kata-kata mengikuti pola musik yang teratur"> Mengubah kata-kata mengikuti pola musik yang teratur</label>
+            <label><input type="checkbox" name="cek-kesukaan-4" value="Mengetuk/menjentikan jari tangan"> Mengetuk/menjentikan jari tangan</label>
+        </div>
+
+        <!-- Kolom 5 -->
+        <div class="checkbox-column">
+            <p>Kesukaan 5: Alam dan Kehidupan</p>
+            <label><input type="checkbox" name="cek-kesukaan-5" value="Akrab dengan hewan peliharaan"> Akrab dengan hewan peliharaan</label>
+            <label><input type="checkbox" name="cek-kesukaan-5" value="Memperlihatkan kesadaran Ekologis"> Memperlihatkan kesadaran Ekologis</label>
+            <label><input type="checkbox" name="cek-kesukaan-5" value="Meyakini binatang memiliki haknya sendiri"> Meyakini binatang memiliki haknya sendiri</label>
+            <label><input type="checkbox" name="cek-kesukaan-5" value="Mencatat fenomena alam (foto, gambar, buku, dll)"> Mencatat fenomena alam (foto, gambar, buku, dll)</label>
+            <label><input type="checkbox" name="cek-kesukaan-5" value="Membawa pulang serangga, bunga, dll"> Membawa pulang serangga, bunga, dll</label>
+            <label><input type="checkbox" name="cek-kesukaan-5" value="Memperlihatkan pemahaman yang dalam tentang topik-topik yang melibatkan kehidupan (IPA, BIOLOGI, dll)"> Memperlihatkan pemahaman yang dalam tentang topik-topik yang melibatkan kehidupan (IPA, BIOLOGI, dll)</label>
+            <label><input type="checkbox" name="cek-kesukaan-5" value="Senang berada di alam terbuka"> Senang berada di alam terbuka</label>
+            <label><input type="checkbox" name="cek-kesukaan-5" value="Menikmati berjalan-jalan di alam terbuka/kebun binatang, musium, sejarah alam, dsb"> Menikmati berjalan-jalan di alam terbuka/kebun binatang, musium, sejarah alam, dsb</label>
+            <label><input type="checkbox" name="cek-kesukaan-5" value="Menunjukan kepekaan terhadap bentuk-bentuk alam"> Menunjukan kepekaan terhadap bentuk-bentuk alam</label>
+            <label><input type="checkbox" name="cek-kesukaan-5" value="Suka menanam, memelihara tanaman & berkebun"> Suka menanam, memelihara tanaman & berkebun</label>
+            <label><input type="checkbox" name="cek-kesukaan-5" value="Menghabiskan waktu dalam kegiatan alam"> Menghabiskan waktu dalam kegiatan alam</label>
+            <label><input type="checkbox" name="cek-kesukaan-5" value="Senang dekat akuarium"> Senang dekat akuarium</label>
+        </div>
+
+        <!-- Kolom 6 -->
+        <div class="checkbox-column">
+            <p>Kesukaan 6: Gerakan dan Aktivitas Fisik</p>
+            <label><input type="checkbox" name="cek-kesukaan-6" value="Senang bergerak & menyentuh sesuatu"> Senang bergerak & menyentuh sesuatu</label>
+            <label><input type="checkbox" name="cek-kesukaan-6" value="Senang bahasa isyarat & membuat model"> Senang bahasa isyarat & membuat model</label>
+            <label><input type="checkbox" name="cek-kesukaan-6" value="Senang berolah raga & berprestasi"> Senang berolah raga & berprestasi</label>
+            <label><input type="checkbox" name="cek-kesukaan-6" value="Bergerak ketika duduk"> Bergerak ketika duduk</label>
+            <label><input type="checkbox" name="cek-kesukaan-6" value="Tidak dapat duduk diam dalam waktu lama"> Tidak dapat duduk diam dalam waktu lama</label>
+            <label><input type="checkbox" name="cek-kesukaan-6" value="Senang terlihat dalam kegiatan fisik"> Senang terlihat dalam kegiatan fisik</label>
+            <label><input type="checkbox" name="cek-kesukaan-6" value="Perlu menyentuh sesuatu yang ingin dipelajari"> Perlu menyentuh sesuatu yang ingin dipelajari</label>
+            <label><input type="checkbox" name="cek-kesukaan-6" value="Sangat menikmati aktivitas meloncat, lari dll"> Sangat menikmati aktivitas meloncat, lari dll</label>
+            <label><input type="checkbox" name="cek-kesukaan-6" value="Pandai meniru gerakan"> Pandai meniru gerakan</label>
+            <label><input type="checkbox" name="cek-kesukaan-6" value="Senang dengan kegiatan kerajinan tangan"> Senang dengan kegiatan kerajinan tangan</label>
+            <label><input type="checkbox" name="cek-kesukaan-6" value="Menikmati kegiatan kotor-kotoran"> Menikmati kegiatan kotor-kotoran</label>
+            <label><input type="checkbox" name="cek-kesukaan-6" value="Menikmati kegiatan bongkar pasang benda"> Menikmati kegiatan bongkar pasang benda</label>
+            <label><input type="checkbox" name="cek-kesukaan-6" value="Menyukai kegiatan yang melibatkan fisik"> Menyukai kegiatan yang melibatkan fisik</label>
+        </div>
+
+        <!-- Kolom 7 -->
+        <div class="checkbox-column">
+            <p>Kesukaan 7: Kemandirian dan Disiplin</p>
+            <label><input type="checkbox" name="cek-kesukaan-7" value="Tidak cepat puas dengan hasil pekerjaan sendiri"> Tidak cepat puas dengan hasil pekerjaan sendiri</label>
+            <label><input type="checkbox" name="cek-kesukaan-7" value="Peka terhadap perasaan sendiri"> Peka terhadap perasaan sendiri</label>
+            <label><input type="checkbox" name="cek-kesukaan-7" value="Mandiri & penuh percaya diri serta disiplin"> Mandiri & penuh percaya diri serta disiplin</label>
+            <label><input type="checkbox" name="cek-kesukaan-7" value="Daya tahan & mental yang kuat"> Daya tahan & mental yang kuat</label>
+            <label><input type="checkbox" name="cek-kesukaan-7" value="Senang bekerja sendiri"> Senang bekerja sendiri</label>
+            <label><input type="checkbox" name="cek-kesukaan-7" value="Dapat berpartisipasi dengan kelompok"> Dapat berpartisipasi dengan kelompok</label>
+            <label><input type="checkbox" name="cek-kesukaan-7" value="Senang menulis buku harian"> Senang menulis buku harian</label>
+            <label><input type="checkbox" name="cek-kesukaan-7" value="Senang mengingat & mencatat mimpi"> Senang mengingat & mencatat mimpi</label>
+            <label><input type="checkbox" name="cek-kesukaan-7" value="Suka menanyakan silsilah keluarga"> Suka menanyakan silsilah keluarga</label>
+            <label><input type="checkbox" name="cek-kesukaan-7" value="Senang berlama-lama melihat foto keluarga"> Senang berlama-lama melihat foto keluarga</label>
+            <label><input type="checkbox" name="cek-kesukaan-7" value="Senang membaca riwayat pribadi"> Senang membaca riwayat pribadi</label>
+            <label><input type="checkbox" name="cek-kesukaan-7" value="Senang mendengar cerita spiritual"> Senang mendengar cerita spiritual</label>
+            <label><input type="checkbox" name="cek-kesukaan-7" value="Independen & kemauan yang kuat"> Independen & kemauan yang kuat</label>
+        </div>
+
+        <!-- Kolom 8 -->
+        <div class="checkbox-column">
+            <p>Kesukaan 8: Sosial dan Kepemimpinan</p>
+            <label><input type="checkbox" name="cek-kesukaan-8" value="Senang memperlihatkan banyak hal"> Senang memperlihatkan banyak hal</label>
+            <label><input type="checkbox" name="cek-kesukaan-8" value="Suka berdiri tenang dan menepi"> Suka berdiri tenang dan menepi</label>
+            <label><input type="checkbox" name="cek-kesukaan-8" value="Senang membaca buku riwayat hidup"> Senang membaca buku riwayat hidup</label>
+            <label><input type="checkbox" name="cek-kesukaan-8" value="Ingin tahu apa yang memotivasi orang lain dalam bersikap dan berperilaku"> Ingin tahu apa yang memotivasi orang lain dalam bersikap dan berperilaku</label>
+            <label><input type="checkbox" name="cek-kesukaan-8" value="Banyak bersosialisasi dengan lingkungan"> Banyak bersosialisasi dengan lingkungan</label>
+            <label><input type="checkbox" name="cek-kesukaan-8" value="Terlibat dalam kegiatan kelompok dimana saja"> Terlibat dalam kegiatan kelompok dimana saja</label>
+            <label><input type="checkbox" name="cek-kesukaan-8" value="Sebagai penengah jika ada teman yang bertikai"> Sebagai penengah jika ada teman yang bertikai</label>
+            <label><input type="checkbox" name="cek-kesukaan-8" value="Empati yang besar terhadap perasaan orang lain"> Empati yang besar terhadap perasaan orang lain</label>
+            <label><input type="checkbox" name="cek-kesukaan-8" value="Menikmati mengajari orang lain"> Menikmati mengajari orang lain</label>
+            <label><input type="checkbox" name="cek-kesukaan-8" value="Tampak memiliki bakat pemimpin"> Tampak memiliki bakat pemimpin</label>
+            <label><input type="checkbox" name="cek-kesukaan-8" value="Cepat & mudah mengenal lingkungan baru"> Cepat & mudah mengenal lingkungan baru</label>
+            <label><input type="checkbox" name="cek-kesukaan-8" value="Sering dijadikan tempat berkeluh kesah"> Sering dijadikan tempat berkeluh kesah</label>
+            <label><input type="checkbox" name="cek-kesukaan-8" value="Pandai bicara di depan umum & enak didengar"> Pandai bicara di depan umum & enak didengar</label>
+        </div>
+    </div>
+
+    <button class="submit-btn">Kirim</button>
+	<!-- Footer -->
+    <div class="footer">
+        <p1>© 2025 LilSmart Digital. Semua hak cipta dilindungi.</p1>
+    </div>
+
+    <script>
+        function addLetter(letter) {
+            const outputDisplay = document.getElementById('outputDisplay');
+            const newLetter = document.createElement('span');
+            
+            // Menambahkan kelas warna berdasarkan huruf vokal atau konsonan
+            if ('aeiou'.includes(letter)) {
+                newLetter.classList.add('vowel');
+            } else if (['ng', 'ny', 'kh'].includes(letter)) {
+                newLetter.classList.add('consonant');
+            } else {
+                newLetter.classList.add('consonant');
+            }
+
+            newLetter.textContent = letter;
+            outputDisplay.appendChild(newLetter);
+        }
+
+        function addSpace() {
+            const outputDisplay = document.getElementById('outputDisplay');
+            const space = document.createElement('span');
+            space.textContent = ' '; // Add space character
+            outputDisplay.appendChild(space);
+        }
+
+        function clearOutput() {
+            const outputDisplay = document.getElementById('outputDisplay');
+            outputDisplay.innerHTML = '';  // Menghapus semua isi tampilan
+        }
+    </script>
+</body>
+</html>
+
+
+</body>
+</html>
